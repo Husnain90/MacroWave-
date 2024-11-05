@@ -1,0 +1,19 @@
+.responsiveTable thead {
+  display: table-header-group;
+}
+.responsiveTable th {
+  padding: 8px;
+  text-align: left;
+  vertical-align: middle;
+  font-size: 0.75rem;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.pivoted {
+  text-align: left;
+  padding: 16px 8px;
+  vertical-align: middle;
+  align-items: center;
+  font-size: 0.75rem;
+}
