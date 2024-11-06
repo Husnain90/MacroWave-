@@ -9,11 +9,11 @@ const DropDown = () => {
     setSeletectedValue(e.target.value);
   };
   return (
-    <div className="flex border-2 font-medium leading-normal ">
+    <div className="flex font-normal leading-normal text-lg ">
       <select
         value={selectedValue}
         onChange={handleSelectedValue}
-        className="custom-dropDown text-lg "
+        className="custom-dropDown"
       >
         {list.map((item, index) => (
           <option key={index} value={item}>

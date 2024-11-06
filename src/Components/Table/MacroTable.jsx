@@ -1,8 +1,53 @@
 import React from "react";
 import { Table, Thead, Tbody, Tr, Th, Td } from "react-super-responsive-table";
+import HighchartsReact from "highcharts-react-official";
+import Highcharts, { chart } from "highcharts/highstock";
 import "react-super-responsive-table/dist/SuperResponsiveTableStyle.css";
 import "./MacroTable.css";
-import arrowUp from "../../assets/arrowUp.svg"
+import arrowUp from "../../assets/arrowUp.svg";
+const tableData = {
+  tableRow: ["EURUSD", 4.56, 1.65, 10.4, "-4.09bps", "6.5bps", 5.99],
+  chartData: {
+    xValue: [20, 15, 10, 5, 0, -5, -10, -15, -20],
+    yValue: [10, 12, 14, 13, 11, 9, 7, 5, 3],
+  },
+};
+const chartOptions = {
+  chart: {
+   
+    type: "area",
+    panning: false,
+    zoomType: "",
+    pinchType: "",
+    width: 190,
+    height: 85,
+    padding: 0,
+  },
+  legend:{
+    enabled:false
+  },
+  title: {
+    text: " ",
+  },
+  xAxis: {
+    title: {
+      text: "X Axis Label",
+    },
+    categories: tableData.chartData.xValue,
+  },
+  yAxis: {
+    title: {
+      text: "Y Axis Label",
+    },
+  },
+  series: [
+    {
+      type: "line",
+      data: tableData.chartData.yValue,
+      name: "Value",
+    },
+  ],
+};
 const MacroTable = () => {
   return (
     <Table>
@@ -34,31 +79,12 @@ const MacroTable = () => {
               </div>
             </div>
           </Td>
+          <Td>10.7</Td>
           <Td>
-           10.7
-          </Td>
-          <Td>
-            <div className="flex items-center ">
-              <div className="bg-customBlue rounded-lg px-2 py-1">10.4</div>
+            <div className=" flex flex-1  items-center justify-center " >
+              <HighchartsReact highcharts={Highcharts} options={chartOptions} />
             </div>
           </Td>
-          <Td>East Annex</Td>
-        </Tr>
-        <Tr>
-          <Td>Capstone Data</Td>
-          <Td>19 May 2019</Td>
-          <Td>205 Gorgas</Td>
-          <Td>Capstone Data</Td>
-          <Td>19 May 2019</Td>
-          <Td>205 Gorgas</Td>
-        </Tr>
-        <Tr>
-          <Td>Tuscaloosa D3</Td>
-          <Td>29 June 2019</Td>
-          <Td>Github</Td>
-          <Td>Tuscaloosa D3</Td>
-          <Td>29 June 2019</Td>
-          <Td>Github</Td>
         </Tr>
       </Tbody>
     </Table>
