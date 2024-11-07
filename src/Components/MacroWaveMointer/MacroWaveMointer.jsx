@@ -11,11 +11,11 @@ const MacroWaveMointer = () => {
           <h1 className="text-3xl font-medium ">Macro Hive Event Mointor</h1>
         </div>
       </div>
-      <div className="border-2  flex  flex-col gap-4 p-4 ">
+      <div className="  flex  flex-col gap-4 p-4  shadow-lightShadow">
         <div className="flex flex-1  items-stretch">
           <div className="flex items-center gap-2 flex-1 justify-between">
             <div className="flex gap-2 items-center flex-1 ">
-              <h3 className="text-meduimGrey text-sm font-normal flex-1 ">
+              <h3 className="text-meduimGrey text-[11px] font-normal  ">
                 Choose Event
               </h3>
               <CurrencyDropDown />
@@ -27,7 +27,7 @@ const MacroWaveMointer = () => {
             </div>
             <div>
               <div className="flex  gap-2 items-center justify-center flex-1">
-                <h3 className="text- text-sm font-normal text-meduimGrey  ">
+                <h3 className="text- text-[11px] font-normal text-meduimGrey  ">
                   New Release
                 </h3>
                 <h3 className="text-sm bg-[#F3F3F3] py-1 px-2 rounded-lg">
@@ -42,7 +42,7 @@ const MacroWaveMointer = () => {
             </div>
           </div>
         </div>
-        <div className="flex items-stretch border-2">
+        <div className="flex items-stretch ">
          
           <MacroTable />
         </div>

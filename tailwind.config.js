@@ -14,10 +14,9 @@ module.exports = {
         customBlue: "#D6FBE7",
         meduimGrey: "#6E6F71",
       },
-    },
-
-    boxShadow: {
-      lightShadow: "box-shadow: 0px 12px 24.1px 0px rgba(178, 178, 178, 0.12);",
+      boxShadow: {
+        lightShadow: "0px 4px 6px rgba(178, 178, 178, 0.25)", 
+      },
     },
   },
   plugins: [],
