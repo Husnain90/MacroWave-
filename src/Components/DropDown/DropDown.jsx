@@ -3,17 +3,17 @@ import DropDownArrow from "../DropDownArrow/DropDownArrow";
 import "./DropDown.css";
 
 const DropDown = () => {
-  const list = ["Research", "data", "wave"];
+  const list = ["Research", "Tools", "About"];
   const [selectedValue, setSeletectedValue] = useState("");
   const handleSelectedValue = (e) => {
     setSeletectedValue(e.target.value);
   };
   return (
-    <div className="flex border-2 font-medium leading-normal ">
+    <div className="flex font-normal leading-normal text-lg ">
       <select
         value={selectedValue}
         onChange={handleSelectedValue}
-        className="custom-dropDown text-lg "
+        className="custom-dropDown"
       >
         {list.map((item, index) => (
           <option key={index} value={item}>
