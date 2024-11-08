@@ -4,16 +4,42 @@
 .responsiveTable th {
   padding: 8px;
   text-align: left;
-  vertical-align: middle;
   font-size: 0.75rem;
   font-weight: 500;
   line-height: normal;
+  display: flex;
+  align-self: stretch;
+  flex: 1 0 0;
+  align-items: center;
+}
+@media screen and (max-width: 477px) {
+ 
+  .pivoted {
+    margin-top: 15px;
+  }
+  
 }
 
 .pivoted {
   text-align: left;
   padding: 16px 8px;
-  vertical-align: middle;
-  align-items: center;
   font-size: 0.75rem;
+  display: flex;
+  flex: 1 0 0;
+  align-items: center;
+}
+.highcharts-axis-title {
+  display: none;
+}
+/* .highcharts-container {
+ top: -6.4px;
+}
+.highcharts-root {
+  height: 35px;
+} */
+ .highcharts-background{
+  fill:transparent
+ }
+.responsiveTable tr {
+  cursor: pointer;
 }

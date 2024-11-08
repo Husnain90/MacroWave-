@@ -4,7 +4,7 @@ import NavBar from "./Components/NavBar/NavBar";
 
 function App() {
   return (
-    <div className="flex flex-col items-center gap-8 ">
+    <div className="flex flex-col items-center gap-8 bg-[#FDFAFC]">
       <NavBar />
       <MacroWaveMointer />
     </div>
