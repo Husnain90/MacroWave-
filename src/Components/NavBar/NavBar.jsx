@@ -5,10 +5,10 @@ import DropDown from "../DropDown/DropDown";
 const NavBar = () => {
   return (
     <div className=" h-full flex flex-col  md:h-76  px-16 py-0  items-center justify-between shadow-lightShadow w-full md:flex-row bg-[#FFFFFF] ">
-      <div className="border-red-200 flex-1 items-start">
+      <div className=" flex-1 items-start">
         <img src={macroWave} alt="" />
       </div>
-      <div className="flex gap-15 border-2 items-center">
+      <div className="flex gap-15  items-center">
         <DropDown />
         <DropDown />
         <DropDown />

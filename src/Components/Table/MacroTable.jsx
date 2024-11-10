@@ -166,7 +166,7 @@ const MacroTable = () => {
   return (
     <Table>
       <Thead>
-        <Tr>
+        <Tr className="flex items-stretch flex-1">
           <Th>Symbol</Th>
           <Th>Avg Daily Realised bps</Th>
           <Th>
@@ -187,40 +187,16 @@ const MacroTable = () => {
         </Tr>
       </Thead>
       <Tbody>
-        <Tr>
-          <Td>Payrolls</Td>
-          <Td>job</Td>
-          <Td>20/10/2014</Td>
-          <Td>1.65</Td>
-          <Td>
-            <div className="flex items-center ">
-              <div className="bg-customBlue rounded-lg px-2 py-1">10.4</div>
-              <div>
-                <img src={arrowUp} alt="" />
-              </div>
-            </div>
-          </Td>
-          <Td>10.7</Td>
-          <Td>
-            <div className="flex items-center ">
-              <div className="bg-customBlue rounded-lg px-2 py-1">10.4</div>
-            </div>
-          </Td>
-
-          <Td>10.7</Td>
-          <Td>
-            <HighchartsReact highcharts={Highcharts} options={chartOptions} />
-          </Td>
-        </Tr>
         {dataArray.map((row, index) => (
           <Tr
             key={index}
-            className="border-b border-[#C7C7Cb] md:h-[47px] flex items-start self-stretch"
+            className=" border-b  border-[#C7C7Cb] md:h-[47px] flex items-start self-stretch"
             // onClick={setGraph(row.chartData)}
             onClick={() => {
               setGraph(row.chartData);
               OpenModel();
             }}
+            
           >
             <Td>{row.symbol}</Td>
             <Td>{row.avgDailyRealisedOps}</Td>
@@ -246,17 +222,19 @@ const MacroTable = () => {
               <Chips value={row.historicReturnAddOnBps} isArrow={false} />
             </Td>
             <Td>{row.tStats}</Td>
-            <Td>
-              <HighchartsReact
-                highcharts={Highcharts}
-                options={{
-                  ...chartOptions,
-                  series: [
-                    { ...chartOptions.series[0], data: row.chartData.yValue },
-                  ],
-                }}
-              />
-            </Td>
+            <div className="graph">
+              <Td>
+                <HighchartsReact
+                  highcharts={Highcharts}
+                  options={{
+                    ...chartOptions,
+                    series: [
+                      { ...chartOptions.series[0], data: row.chartData.yValue },
+                    ],
+                  }}
+                />
+              </Td>
+            </div>
           </Tr>
         ))}
       </Tbody>

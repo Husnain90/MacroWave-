@@ -4,11 +4,11 @@
 .responsiveTable th {
   padding: 8px;
   text-align: left;
-  /* vertical-align: middle; */
+ 
   font-size: 0.75rem;
   font-weight: 500;
   line-height: normal;
-  /* border: 2px solid black; */
+ 
   display: flex;
   align-self: stretch;
   flex: 1 0 0;
@@ -18,7 +18,7 @@
 .pivoted {
   padding: 16px 8px;
   font-size: 0.75rem;
-  /* border: 2px solid black; */
+
   display: flex;
   flex: 1 0 0;
   align-items: center;
@@ -26,9 +26,29 @@
 .highcharts-axis-title {
   display: none;
 }
-.highcharts-container {
+/* .highcharts-container {
  top: -6.4px;
-}
-.highcharts-root {
+} */
+/* .highcharts-root {
   height: 35px;
+} */
+@media screen  and  (max-width: 477px){
+  .pivoted {
+    height: 80px;
+    cursor: pointer;
+
+  }
+}
+.highcharts-background {
+  fill: transparent;
+}
+/* .highcharts-root {
+  height: 35px;
+} */
+
+.highcharts-container {
+  top: -6.4px;
+}
+.pivoted {
+  cursor: pointer;
 }

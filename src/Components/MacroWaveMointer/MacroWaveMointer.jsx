@@ -6,17 +6,17 @@ import TestTable from "../Table/TestTable";
 
 const MacroWaveMointer = () => {
   return (
-    <div className="flex flex-col  gap-4 self-stretch mx-28 bg-[#FFFFFF] ">
+    <div className="flex flex-col  gap-4 self-stretch mx-28 bg-[#FFFFFF] shadow-lightShadow">
       <div className="flex gap-8 ">
         <div className="flex flex-1 ">
           <h1 className="text-3xl font-medium ">Macro Hive Event Mointor</h1>
         </div>
       </div>
-      <div className="  flex  flex-col gap-4 p-4  shadow-lightShadow">
-        <div className="  flex flex-1  items-stretch">
-          <div className="flex flex-col md:flex-row items-center gap-2 flex-1 justify-between">
+      <div className="  flex  flex-col gap-4 p-4  shadow-lightShadow border-0.5">
+        <div className="  flex flex-1  items-stretch border-0.5 border-primary">
+          <div className="flex flex-col md:flex-row items-center gap-2 flex-1 justify-between border-0.5">
             <div className="flex flex-col md:flex-row gap-2 items-center flex-1 ">
-              <h3 className="text-meduimGrey text-[11px] font-normal  ">
+              <h3 className="text-meduimGrey text-[11px] font-normal text-[#6E6F71] ">
                 Choose Event
               </h3>
               <CurrencyDropDown />
@@ -28,7 +28,7 @@ const MacroWaveMointer = () => {
             </div>
             <div>
               <div className="flex  gap-2 items-center justify-center flex-1">
-                <h3 className="text- text-[11px] font-normal text-meduimGrey  ">
+                <h3 className="text- text-[11px] font-normal text-meduimGrey text-[#6E6F71] ">
                   New Release
                 </h3>
                 <h3 className="text-sm bg-[#F3F3F3] py-1 px-2 rounded-lg">
