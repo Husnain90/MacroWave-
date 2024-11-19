@@ -9,7 +9,7 @@ const DropDown = () => {
     setSeletectedValue(e.target.value);
   };
   return (
-    <div className="flex border-2 font-medium leading-normal ">
+    <div className="flex  font-medium leading-normal ">
       <select
         value={selectedValue}
         onChange={handleSelectedValue}
